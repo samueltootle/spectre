@@ -82,7 +82,7 @@ class FukaInitialData : public evolution::initial_data::InitialData,
   tuples::TaggedTuple<RequestedTags...> variables(
       const tnsr::I<DataVector, 3>& x,
       tmpl::list<RequestedTags...> /*meta*/) const {
-    auto interpolated_vars = io::interpolate_from_fuka<io::FukaIdType::Bns>(
+    auto interpolated_vars = io::interpolate_from_fuka<io::FukaIdType::Ns>(
         make_not_null(&fuka_lock_), info_filename_, x);
     tuples::TaggedTuple<RequestedTags...> result{};
     // Move interpolated data into result buffer
