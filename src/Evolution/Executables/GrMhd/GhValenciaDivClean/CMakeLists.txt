@@ -106,3 +106,9 @@ add_ghmhd_executable(
   "gh::Solutions::WrappedGr<RelativisticEuler::Solutions::TovStar>,false,BondiSachs"
   "${LIBS_TO_LINK}"
   )
+
+add_ghmhd_executable(
+  FukaInitialData
+  "evolution::NumericInitialData,false,BondiSachs"
+  "${LIBS_TO_LINK}"
+  )
